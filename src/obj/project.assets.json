@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\dev\\Raidcore\\Website\\Raidcore-StaticPageBuilder\\Raidcore-StaticPageBuilder\\Raidcore-StaticPageBuilder.csproj",
+      "projectUniqueName": "D:\\dev\\Raidcore\\Website\\Raidcore-StaticPageBuilder\\src\\Raidcore-StaticPageBuilder.csproj",
       "projectName": "Raidcore-StaticPageBuilder",
-      "projectPath": "D:\\dev\\Raidcore\\Website\\Raidcore-StaticPageBuilder\\Raidcore-StaticPageBuilder\\Raidcore-StaticPageBuilder.csproj",
+      "projectPath": "D:\\dev\\Raidcore\\Website\\Raidcore-StaticPageBuilder\\src\\Raidcore-StaticPageBuilder.csproj",
       "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
-      "outputPath": "D:\\dev\\Raidcore\\Website\\Raidcore-StaticPageBuilder\\Raidcore-StaticPageBuilder\\obj\\",
+      "outputPath": "D:\\dev\\Raidcore\\Website\\Raidcore-StaticPageBuilder\\src\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

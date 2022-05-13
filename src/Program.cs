@@ -36,7 +36,16 @@ namespace Raidcore_StaticPageBuilder
 			{
 				if(Directory.Exists(target))
 				{
-					Directory.Delete(target, true);
+					string[] subDirs = Directory.GetDirectories(target);
+					foreach (string dir in subDirs)
+					{
+						if (!dir.Contains(".git")) { Directory.Delete(dir, true); }
+					}
+					string[] files = Directory.GetFiles(target);
+					foreach (string file in files)
+					{
+						File.Delete(file);
+					}
 				}
 
 				Directory.CreateDirectory(target);
