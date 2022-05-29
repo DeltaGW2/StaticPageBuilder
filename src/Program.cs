@@ -67,6 +67,7 @@ namespace Raidcore_StaticPageBuilder
 		{
 			string mainStart = "<main id=\"content\">";
 
+			skeleton = skeleton.Replace("href=\"./", "href=\"https://raidcore.gg");
 			skeleton = skeleton.Replace("href=\"favicon", "href=\"https://raidcore.gg/favicon");
 			skeleton = skeleton.Replace("href=\"Styles/", "href=\"https://raidcore.gg/Styles/");
 			skeleton = skeleton.Replace("src=\"libs/", "src=\"https://raidcore.gg/libs/");
