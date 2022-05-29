@@ -13,3 +13,4 @@ D:\dev\Raidcore\Website\Raidcore-StaticPageBuilder\src\obj\Debug\net5.0\Raidcore
 D:\dev\Raidcore\Website\Raidcore-StaticPageBuilder\src\obj\Debug\net5.0\ref\Raidcore-StaticPageBuilder.dll
 D:\dev\Raidcore\Website\Raidcore-StaticPageBuilder\src\obj\Debug\net5.0\Raidcore-StaticPageBuilder.pdb
 D:\dev\Raidcore\Website\Raidcore-StaticPageBuilder\src\obj\Debug\net5.0\Raidcore-StaticPageBuilder.genruntimeconfig.cache
+D:\dev\Raidcore\Website\Raidcore-StaticPageBuilder\src\obj\Debug\net5.0\Raidcore-StaticPageBuilder.csproj.AssemblyReference.cache
