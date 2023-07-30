@@ -391,7 +391,7 @@ namespace StaticPageBuilder
 			}
 		}
 		#region Helpers
-		static string[] _IGNORE = { "src", "fon", "fonts", "img", "images", "res", "resources", "vid", "videos", "css", "styles", "js", "scripts", ".git", "CNAME", "favicon" };
+		static string[] _IGNORE = { "src", "fon", "fonts", "img", "images", "res", "resources", "vid", "videos", "css", "styles", "js", "scripts", ".git", "CNAME" };
 
 		/// <summary> Clears the root directory of all files and folders, except the whitelist. </summary>
 		static void ClearRoot()
@@ -428,7 +428,7 @@ namespace StaticPageBuilder
 					bool matchesAny = false;
 					foreach (string ignore in _IGNORE)
 					{
-						if (file.EndsWith(ignore, StringComparison.InvariantCultureIgnoreCase))
+						if (file.EndsWith(ignore, StringComparison.InvariantCultureIgnoreCase) || file.Contains("favicon"))
 						{
 							matchesAny = true;
 							break;
