@@ -32,8 +32,6 @@ namespace StaticPageBuilder
 			Parse(target);
 
 			Console.WriteLine("Done.");
-
-			Console.ReadKey();
 		}
 
 		/// <summary> Returns all Identifiers in a Dictionary for the given location. </summary>
