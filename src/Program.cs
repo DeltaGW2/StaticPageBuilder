@@ -10,6 +10,32 @@ namespace StaticPageBuilder
 {
 	class Program
 	{
+		static void Main(string[] args)
+		{
+			string target;
+
+			if (args.Length == 1)
+			{
+				target = args[0];
+			}
+			else
+			{
+				do
+				{
+					Console.WriteLine("Enter target folder:");
+					target = Console.ReadLine();
+				} while (!Directory.Exists(target));
+			}
+
+			Console.WriteLine("Parsing: " + target);
+
+			Parse(target);
+
+			Console.WriteLine("Done.");
+
+			Console.ReadKey();
+		}
+
 		/// <summary> Returns all Identifiers in a Dictionary for the given location. </summary>
 		static Dictionary<string, string> GetIdentifiers(string path, bool relativeFromSource = true)
 		{
@@ -451,27 +477,5 @@ namespace StaticPageBuilder
 			}
 		}
 		#endregion
-
-		////////////////////////////////////////////////////////
-
-		static void Main(string[] args)
-		{
-			string target;
-
-			do
-			{
-				Console.Clear();
-				Console.WriteLine("Enter target folder:");
-				target = Console.ReadLine();
-			} while (!Directory.Exists(target));
-
-			Console.WriteLine("Parsing: " + target);
-
-			Parse(target);
-
-			Console.WriteLine("Done.");
-
-			Console.ReadKey();
-		}
 	}
 }
