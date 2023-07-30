@@ -2,12 +2,17 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>Raidcore_StaticPageBuilder</RootNamespace>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>StaticPageBuilder</RootNamespace>
+    <StartupObject>StaticPageBuilder.Program</StartupObject>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <OutputPath></OutputPath>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AngleSharp" Version="1.0.4" />
+  </ItemGroup>
 
 </Project>
