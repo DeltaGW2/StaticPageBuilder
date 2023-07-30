@@ -330,7 +330,7 @@ namespace StaticPageBuilder
 				{
 					int idxComponentStart = layout.IndexOf("@component::");
 					int idxComponentEnd = layout.IndexOf(";", idxComponentStart);
-					string key = layout.Substring(idxComponentStart + 12, idxComponentEnd + 12 - idxComponentStart);
+					string key = layout.Substring(idxComponentStart + 12, idxComponentEnd - (idxComponentStart + 12));
 
 					layout = layout.Remove(idxComponentStart, idxComponentEnd + 1 - idxComponentStart);
 
