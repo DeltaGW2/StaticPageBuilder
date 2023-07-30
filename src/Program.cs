@@ -340,8 +340,8 @@ namespace StaticPageBuilder
 
 					int idxListIdEnd = layout.IndexOf("(", idxListStart);
 
-					string key = layout.Substring(idxListStart + 5, idxListIdEnd + 5 - idxListStart);
-					string listPath = layout.Substring(idxListIdEnd + 1, idxListEnd - 2 - idxListIdEnd + 1); // this is absolute spaghetti
+					string key = layout.Substring(idxListStart + 7, idxListIdEnd - (idxListStart + 7));
+					string listPath = layout.Substring(idxListIdEnd + 1, idxListEnd - 1 - (idxListIdEnd + )); // this is absolute spaghetti, explained later for templates
 
 					layout = layout.Remove(idxListStart, idxListEnd + 1 - idxListStart);
 
