@@ -391,7 +391,7 @@ namespace StaticPageBuilder
 			}
 		}
 		#region Helpers
-		static string[] _IGNORE = { "src", "fon", "fonts", "img", "images", "res", "resources", "vid", "videos", "css", "styles", "js", "scripts", ".git", "CNAME" };
+		static string[] _IGNORE = { "src", "fon", "fonts", "img", "images", "res", "resources", "vid", "videos", "css", "styles", "js", "scripts", ".git", "CNAME", ".gitattributes", ".gitignore" };
 
 		/// <summary> Clears the root directory of all files and folders, except the whitelist. </summary>
 		static void ClearRoot()
