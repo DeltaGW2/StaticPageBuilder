@@ -135,8 +135,8 @@ namespace StaticPageBuilder
 		{
 			Dictionary<string, string> identifiers = GetIdentifiers(path);
 
-			string value = "";
-			identifiers.TryGetValue(identifier, out value);
+			identifiers.TryGetValue(identifier, out string value);
+			if (value == null) { value = ""; }
 
 			return value;
 		}
@@ -210,8 +210,8 @@ namespace StaticPageBuilder
 
 					html = html.Remove(start, end - start);
 
-					string value = "";
-					parameters.TryGetValue(key, out value);
+					parameters.TryGetValue(key, out string value);
+					if (value == null) { value = ""; }
 
 					html = html.Insert(start, value);
 				} while (html.IndexOf("@param::") != -1);
@@ -265,9 +265,9 @@ namespace StaticPageBuilder
 		/// <summary> Returns the layout with the given name, or the default layout if none exists. </summary>
 		static string ResolveLayout(string name, out string title)
 		{
-			title = "";
 			Dictionary<string, string> identifiers = GetIdentifiers(Path.Combine(Index._LAYOUTS, name + ".html"));
 			identifiers.TryGetValue("Title", out title);
+			if (title == null) { title = ""; }
 
 			return GetContent(Path.Combine(Index._LAYOUTS, name + ".html"));
 		}
@@ -366,6 +366,9 @@ namespace StaticPageBuilder
 
 					string key = layout.Substring(idxListStart + 7, idxListIdEnd - (idxListStart + 7));
 					string listPath = layout.Substring(idxListIdEnd + 1, idxListEnd - 1 - (idxListIdEnd + 1)); // this is absolute spaghetti, explained later for templates
+
+					listPath = listPath.TrimStart('"');
+					listPath = listPath.TrimEnd('"');
 
 					layout = layout.Remove(idxListStart, idxListEnd + 1 - idxListStart);
 
