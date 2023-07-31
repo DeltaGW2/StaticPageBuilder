@@ -206,7 +206,7 @@ namespace StaticPageBuilder
 				{
 					int start = html.IndexOf("@param::");
 					int end = html.IndexOf(";", start);
-					string key = html.Substring(start + 8, end + 8 - start);
+					string key = html.Substring(start + 8, end - (start + 8));
 
 					html = html.Remove(start, end - start);
 
@@ -251,7 +251,7 @@ namespace StaticPageBuilder
 					string fileRel = file.Replace(Index._SRC, "");
 					// only get the ending after src, so the template can resolve the file itself
 
-					Dictionary<string, string> fileIdentifiers = GetIdentifiers(fileRel);
+					Dictionary<string, string> fileIdentifiers = GetIdentifiers(file, false);
 
 					html += ResolveTemplateMapped(template, fileIdentifiers);
 				}
