@@ -414,6 +414,7 @@ namespace StaticPageBuilder
 
 				layout = sw.ToString();
 
+				Directory.CreateDirectory(Path.GetDirectoryName(outPath)); // ensure entire directory path exists
 				File.WriteAllText(outPath, layout);
 			}
 		}
