@@ -208,7 +208,7 @@ namespace StaticPageBuilder
 					int end = html.IndexOf(";", start);
 					string key = html.Substring(start + 8, end - (start + 8));
 
-					html = html.Remove(start, end - start);
+					html = html.Remove(start, end + 1 - start);
 
 					parameters.TryGetValue(key, out string value);
 					if (value == null) { value = ""; }
