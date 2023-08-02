@@ -97,6 +97,11 @@ To list a number of elements, you can use the `list` control, which also makes u
 This will now create a list of elements, based on the template found at `src/.templates/PostListing.html`.
 To determine what these templates do let's go over that next.
 
+Lists also add a custom parameter to use within templates `Location` and `LocationSuffix` which map to the relative file path of the current list item.
+So with the above example, having a file "my-first-blog-post.html" would result in `Location` being "posts/my-first-blog-post" and LocationSuffix would be the same with an addtional ".html" in the end.
+
+This can be used to reference to the post with a hyperlink.
+
 ### Templates
 Templates take parameters, when using a template via list, the parameters are taken from the input files identifiers.
 In our earlier example the following template

@@ -252,6 +252,8 @@ namespace StaticPageBuilder
 					// only get the ending after src, so the template can resolve the file itself
 
 					Dictionary<string, string> fileIdentifiers = GetIdentifiers(file, false);
+					fileIdentifiers.Add("Location", fileRel.Replace(".html", ""));
+					fileIdentifiers.Add("LocationSuffix", fileRel);
 
 					html += ResolveTemplateMapped(template, fileIdentifiers);
 				}
